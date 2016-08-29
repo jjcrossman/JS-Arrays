@@ -207,13 +207,19 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
   //Code Here
-
-
-
-//Next Problem
-
-
-
+function addTen ( numbers ) {
+  var tenArray = [];
+  for (var i = 0; i < numbers.length; i++) {
+    tenArray.push(parseInt(numbers[i]) + 10);
+  }
+  return tenArray;
+}
+//
+//
+// //Next Problem
+//
+//
+//
 var num1 = Math.floor(Math.random() * (30 - 0) + 0);
 var num2 = Math.floor(Math.random() * (30 - 0) + 0);
 var arr1 = [];
@@ -228,7 +234,14 @@ for(var i = 0; i < num2; i++){
 //Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
   //Code Here
+function longer ( arr1, arr2 ) {
+ if (arr1.length > arr2.length)  {
+   return arr1;
+ } else {
+   return arr2;
+ }
 
+};
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
@@ -237,7 +250,25 @@ for(var i = 0; i < num2; i++){
 */
 
   //Code Here
+function both ( arr1, arr2 ) {
+  var newArray = [];
+  if (arr1.length >= arr2.length) {
+    var length = arr1.length;
+    var longer = arr1;
+    var shorter = arr2;
+  } else {
+    var length = arr2.length;
+    var longer = arr2;
+    var shorter = arr1;
+  }
 
+  for (var i = 0; i < length; i++){
+    if (longer.indexOf(shorter[i]) !== -1 && shorter[i] !== undefined) {
+      newArray.push(shorter[i]);
+    }
+  }
+  return newArray;
+}
 
 
 
