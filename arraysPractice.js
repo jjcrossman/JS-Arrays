@@ -250,6 +250,7 @@ function longer ( arr1, arr2 ) {
 */
 
   //Code Here
+  //This passes the spec if you comment out line 216 and above
 function both ( arr1, arr2 ) {
   var newArray = [];
   if (arr1.length >= arr2.length) {
@@ -269,14 +270,14 @@ function both ( arr1, arr2 ) {
   }
   return newArray;
 }
-
-
-
-//NEXT PROBLEM
-
-
-
-
+//This passes the spec if you comment out line 216 and above
+//
+//
+// //NEXT PROBLEM
+//
+//
+//
+//
 var devMountainEmployees = [];
 
 var tyler = {
@@ -302,19 +303,26 @@ var colt = {
     position: 'Everything really',
     spiritAnimal: 'Young Male Horse'
 };
-
-/*Above you're given an empty array with four objects. Fill the devMountainEmployees
-array with those four objects. After that console.log the length of the Array and make
-sure that it's equal to 4. */
-
-  //Code Here
-
+//
+// /*Above you're given an empty array with four objects. Fill the devMountainEmployees
+// array with those four objects. After that console.log the length of the Array and make
+// sure that it's equal to 4. */
+//
+//   //Code Here
+devMountainEmployees.push(tyler);
+devMountainEmployees.push(cahlan);
+devMountainEmployees.push(ryan);
+devMountainEmployees.push(colt);
+console.log("devMountainEmployees has a length of " + devMountainEmployees.length);
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
-
-
+for (var i = 0; i < devMountainEmployees.length; i++) {
+  if (devMountainEmployees[i] === cahlan) {
+    devMountainEmployees.splice(i, 1);
+  }
+}
 
 
 //NEXT PROBLEM
@@ -355,7 +363,7 @@ of Data is to have an Array full of objects. */
 //Create an empty array called users.
 
   //Code Here
-
+var users = [];
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
 
@@ -366,11 +374,28 @@ var user1 = {
     password: 'iLoveJavaScript',
     username: 'infiniateLoop'
 };
+var user2 = {
+    name: 'Beat Gozon',
+    email: 'beatgozon@live.com',
+    password: 'uCann0tsTOP',
+    username: 'beats_by_gozon'
+};
+var user3 = {
+    name: 'Salazar Slytherin',
+    email: 'slytherinhousehead@hogwarts.edu',
+    password: 'lilypotter',
+    username: 'dormant_green'
+};
 
 //Your Code Here
 
+users.push(user1);
+users.push(user2);
+users.push(user3);
+
+
 /*Now you have a very common data structure. Twitter is a good use case.
-It's easy to imagine that your followers list on Twitter is an Array full or objects
+It's easy to imagine that your followers list on Twitter is an Array full of objects
 and those objects contain properties about the specific person you follow.*/
 
 /*Now let's say that Tyler decided to delete his account. Loop through your array of
@@ -378,5 +403,11 @@ objects until you find Tyler's account (use tylermcginnis33@gmail.com to find hi
 Once you find the particular index he's located in, delete him from the array.*/
 
   //Code Here
+for (var i = 0; i < users.length; i++) {
+  if (users[i].email === "tylermcginnis33@gmail.com") {
+    users.splice(users[i], 1);
+  }
+}
 
+console.log(users);
 //The activity we just did is very much how data works in 'the real world'.
