@@ -111,7 +111,15 @@ var getRandomArbitrary = function() {
 // to see if that random number is in the array. If it is, return true, if it's not, return false
 
   //Code Here
-
+function finder( array ) {
+  var randomNum = getRandomArbitrary();
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === randomNum) {
+      return true;
+    }
+  }
+  return false;
+}
   //Code Here
 
 
@@ -123,7 +131,9 @@ var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
 
   //Code Here
-
+function reverse ( str ) {
+  return str.split("").reverse().join("");
+}
 
 //Next Problem
 
@@ -147,6 +157,26 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   //Code Here
+function removeItem ( myGroceryList, item ) {
+  if ( !Array.isArray( myGroceryList ) ) {
+    return [];
+  }
+  var newList = [];
+  for (var i = 0; i < myGroceryList.length; i++) {
+    if (myGroceryList[i] !== item) {
+      newList.push(myGroceryList[i]);
+    }
+  }
+  return newList;
+}
+
+function addItem ( myGroceryList, item ) {
+  if ( !Array.isArray( myGroceryList ) ) {
+    return [];
+  }
+  myGroceryList.push(item);
+  return myGroceryList;
+}
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
@@ -160,7 +190,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
-
+function maker () {
+  var madeArr = [];
+  for (var i = 1; i <= 215; i++) {
+    madeArr.push(i);
+  }
+  return madeArr;
+}
 
 
 //Next Problem
